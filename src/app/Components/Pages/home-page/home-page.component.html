@@ -1,0 +1,113 @@
+<div class="row layout">
+    <div class="row col-12 inside-layout">
+        <div class="col-4 admin-section" style="justify-content: center;">
+            <div class="admin-block">
+                <div class="row col-12" style="text-align: center;">
+                    <span class="col-1 glyphicon glyphicon-user" style="margin-right: 16px;" aria-hidden="true"></span>
+                <p class="admin">admin</p>
+                <p class="admin">g.alex00@bk.ru</p>
+
+                <div class="row col-12 option">
+                    <div class="col-4">
+                        4<p>To do Tasks</p>
+                    </div>
+                    <div class="col-4">
+                        1<p>Completes Tasks</p>
+                    </div>
+                    <div class="col-4">
+                        0<p>Primary Tasks</p>
+                    </div>
+                </div>
+                </div>
+                
+            </div>
+
+            <div class="Categories-block">
+                <div class="row">
+                    <div class="col-12 categories">Categories</div>
+                    
+                    <div class="row work-para">
+                        <div class="col-2">
+                            <label class="glyphicon glyphicon-minus work-glyphi" aria-hidden="true"></label>
+                        </div>
+                        <div class="col-6 work-lebel">Work</div>
+                    </div>
+                </div>
+                
+
+            </div>
+            <div class="Friends-block">
+                <div class="row col-12" style="text-align: center;">
+                    <p class="friends">Friends</p>
+                    <label class="glyphicon glyphicon-inbox" aria-hidden="true"></label>
+                    <p class="no-data">No Data</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-8 main-section">
+            <div class="row nav-menu" style="font-size: 18px;">
+                <ul class="nav">
+                    <div class="col-md-2 col-sm-12 nav-item nav-link">HOME</div>
+                    <div class="col-md-2 col-sm-12 nav-item nav-link">TODOS</div>
+                    <div class="col-md-2 col-sm-12 nav-item nav-link">SETTINGS</div>
+                    <div class="col-md-2 col-sm-12 nav-item nav-link">SUPPORT</div>
+                    <div class="col-md-2 col-sm-12 nav-item nav-link">LOGOUT</div>
+                </ul>
+            </div>
+            <div class="row" style="width: 120%; padding-top: 20px;">
+                <div class="col-3 work"><label class="glyphicon glyphicon-minus work-glyphi-main" aria-hidden="true"></label>Work</div>
+                <div class="col-2">
+                    <span class="col-1 glyphicon glyphicon-menu-down" style="margin-right: 16px;"
+                        aria-hidden="true"></span>
+                    <span class="col-1 glyphicon glyphicon-plus" style="margin-right: 16px;" aria-hidden="true"></span>
+                    <span class="col-1 glyphicon glyphicon glyphicon-minus" style="margin-right: 16px;"
+                        aria-hidden="true"></span>
+                </div>
+                <div class="col-5">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link active btn btn-primary active-btn" type="button" aria-current="page"
+                                href="#">ALL</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"  style="color:gray">ACTIVE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"  style="color:gray">COMPLETED</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"  style="color:gray">PRIMARY</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class= "row col-sm-10" style="margin-top:5%" *ngFor="let list of lists ;let row=index">
+                <div class="col-1 actions" >
+                    <label class="glyphicon glyphicon-th-large" aria-hidden="true"></label>
+                </div>
+                <div class="col-1 actions" >
+                    <label class="glyphicon glyphicon-align-justify" aria-hidden="true"></label>
+                </div>
+                <div class="col-1 actions" style="right: 16px;position: relative;" >
+                    <div class="container">
+                        <label class="container">
+                            <input type="checkbox" [checked]=list.checked>
+                            <span class="checkmark"></span>
+                          </label>
+                      </div>
+                </div>
+                <div class="col-6">
+                    <span class="title">{{list.name}}</span>
+                    <p class="subtitle">
+                        {{list.ip}}<span style="padding-left: 10px;">{{list.time}}</span>
+                    </p>
+                </div>
+            </div> 
+            <div class="footer">
+                <button class="newTask-btn">New Task</button>
+            </div>          
+        </div>
+        
+    </div>
+</div>
